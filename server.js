@@ -1,48 +1,31 @@
-require("dotenv").config();
-var express = require("express");
-var bodyParser = require("body-parser");
+// Pull in required dependencies
+var express = require('express');
+var bodyParser = require('body-parser');
 var exphbs = require("express-handlebars");
 
-var db = require("./models");
-
-var app = express();
 var PORT = process.env.PORT || 3000;
 
-// Middleware
+var app = express();
+
+// Serve static content for the app from the 'public' directory
+app.use(express.static("app/public"));
+
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
-app.use(express.static("public"));
+app.use(express.json())
 
-// Handlebars
-app.engine(
-  "handlebars",
-  exphbs({
-    defaultLayout: "main"
-  })
-);
-app.set("view engine", "handlebars");
+// Set Handlebars as the view engine
+var exphbs = require('express-handlebars');
 
-// Routes
-require("./routes/apiRoutes")(app);
-require("./routes/htmlRoutes")(app);
+app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
+app.set('view engine', 'handlebars');
 
-var syncOptions = { force: false };
+require("./routes/apiRoutes.js")(app);
+require("./routes/htmlRoutes.js")(app);
 
-// If running a test, set syncOptions.force to true
-// clearing the `testdb`
-if (process.env.NODE_ENV === "test") {
-  syncOptions.force = true;
-}
+// Import routes and give the server access to them
+var routes = require('./controllers/covid19_controller.js');
 
-// Starting the server, syncing our models ------------------------------------/
-db.sequelize.sync(syncOptions).then(function() {
-  app.listen(PORT, function() {
-    console.log(
-      "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
-      PORT,
-      PORT
-    );
-  });
+app.listen(PORT, function(){
+  console.log("app listening on: http://localhost: " + PORT);
 });
-
 module.exports = app;
