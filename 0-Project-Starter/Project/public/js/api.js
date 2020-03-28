@@ -56,7 +56,7 @@ req.end(function (covidData) {
 	
 	//console.log(covidData.body.data);
 	}
-module.exports = covidStats;
-})
 
+})
+module.exports = minnStats;
 
