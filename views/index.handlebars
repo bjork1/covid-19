@@ -1,8 +1,96 @@
+<div class="header">
+  <h1>Minneapolis, Minnesota</h1>
+  <h2>Last updated Date</h2>
+</div>
+<div class="main-body">
+  <div class="supply-menu">
+    <h3>Get supplies now</h3>
+    <div class="recent-post">
+      <p>Recent Posts</p>
+      <h3>Examples:</h3>
+      <ul id="example-list" class="list-group">
+        {{#each examples}}
+        <li data-id="{{this.id}}" class="list-group-item">
+          <a href="example/{{this.id}}">{{this.text}}</a>
+          <button class="btn btn-danger float-right delete">ｘ</button>
+        </li>
+        {{/each}}
+      </ul>
+      <div class="post-card">
+        <div class="right">
+          <h5>Title</h5>
+          <p>distance away</p>
+        </div>
+        <div class="left">
+          <img class="post icon">
+          <button>Get</button>
+        </div>
+      </div>
+      <div class="post-card">
+        <div class="right">
+          <h5>Title</h5>
+          <p>distance away</p>
+        </div>
+        <div class="left">
+          <img class="post icon">
+          <button>Get</button>
+        </div>
+      </div>
+      <div class="post-card">
+        <div class="right">
+          <h5>Title</h5>
+          <p>distance away</p>
+        </div>
+        <div class="left">
+          <img class="post icon">
+          <button>Get</button>
+        </div>
+      </div>
+      <p><a href=*>View More</a></p>
+    </div>
+  </div>
+  <div class="center-page">
+    <div class="bubble">
+      <h6 class="number of cases">287</h6>
+      <p>cases</p>
+    </div>
+    <div class="case-info">
+      <h3>1 death</h3>
+      <h3>26 critical</h3>
+    </div>
+    <div class="share buttons">
+      <radio class="supplies">Share Supplies</radio>
+      <radio class="stories">Share Stories</radio>
+    </div>
+    <form class="clearfix mb-4" action="POST">
+      <div class="form-group">
+        <label for="example-text">Example Text</label>
+        <input type="text" id="example-text" class="form-control" aria-describedby="example-text"
+          placeholder="Enter Example Text">
+      </div>
+      <div class="form-group">
+        <label for="example-description">Example Description</label>
+        <textarea class="form-control" id="example-description" aria-describedby="example-description"
+          placeholder="Enter Example Description"></textarea>
+      </div>
+      <button id="submit" class="btn btn-primary float-right">Submit</button>
+    </form>
+
+    <!-- ajax -->
+    <!--
+    <form class="info post">
+      <textarea placeholder="Type here..."></textarea>
+      <button id="submit">Post!</button>
+    </form>
+
+    -->
+  </div>
+</div>
 
 
 
 
-
+<!--
 
 <div id="home">
   <div class="container">
@@ -34,6 +122,8 @@
     </div>
   </div>
 </div>
+
+-->
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
