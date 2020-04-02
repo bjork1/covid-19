@@ -1,6 +1,12 @@
 // Get references to page elements
 var $exampleText = $("#example-text");
 var $exampleDescription = $("#example-description");
+var $exampleName = $("#example-name");
+var $exampleCity = $("#example-city");
+var $exampleState = $("#example-state");
+var $examplePrice = $("example-price");
+
+
 var $submitBtn = $("#submit");
 var $exampleList = $("#example-list");
 
@@ -34,16 +40,57 @@ var API = {
 var refreshExamples = function() {
   API.getExamples().then(function(data) {
     var $examples = data.map(function(example) {
+      
       var $a = $("<a>")
         .text(example.text)
+  
+        
+        //added below
+        //.text(example.description)
         .attr("href", "/example/" + example.id);
+        var $d = $("<p>")
+        .text(example.description);
 
       var $li = $("<li>")
         .attr({
           class: "list-group-item",
           "data-id": example.id
         })
-        .append($a);
+        $li.append($a);
+        $li.append($d);
+/*
+        var $d = $("<p>")
+        .text(example.description)
+        .attr("/example/" + example.id);
+
+        var $li = $("<li>")
+        .attr({
+          class: "list-group-item",
+          "data-id": example.id
+        })
+        
+        .append($d);
+
+        */
+       //var $d = $("<p>")
+      // .text(example.text + "</br>")
+ 
+       //.text(example.description)
+       //added below
+       //.text(example.description)
+      // .attr(example.id);
+       
+     
+      // $li.append($d);
+
+
+
+        
+
+
+        
+      
+      
 
       var $button = $("<button>")
         .addClass("btn btn-danger float-right delete")
@@ -66,13 +113,19 @@ var handleFormSubmit = function(event) {
 
   var example = {
     text: $exampleText.val().trim(),
-    description: $exampleDescription.val().trim()
+    description: $exampleDescription.val().trim(),
+    name: $exampleName.val().trim(),
+    city: $exampleCity.val().trim(),
+    state: $exampleState.val().trim()
+    //price: $examplePrice.val().trim()
+    
   };
 
   if (!(example.text && example.description)) {
     alert("You must enter an example text and description!");
     return;
   }
+  
 
   API.saveExample(example).then(function() {
     refreshExamples();
@@ -80,6 +133,13 @@ var handleFormSubmit = function(event) {
 
   $exampleText.val("");
   $exampleDescription.val("");
+  
+  $exampleName.val("");
+  $exampleCity.val("");
+  $exampleState.val("");
+  $examplePrice.val("");
+  
+  
 };
 
 // handleDeleteBtnClick is called when an example's delete button is clicked
