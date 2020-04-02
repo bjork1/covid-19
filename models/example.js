@@ -1,7 +1,5 @@
-var sequelize = require("sequelize");
-
 module.exports = function(sequelize, DataTypes) {
-  var Example = sequelize.define("Covid19", {
+  var Example = sequelize.define("Example", {
     text: DataTypes.STRING,
     description: DataTypes.TEXT,
     name: DataTypes.TEXT,
