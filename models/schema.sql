@@ -7,7 +7,6 @@ CREATE TABLE need_help_tb (
 id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 title VARCHAR(225),
 description VARCHAR(255),
-street_address VARCHAR(255),
 city VARCHAR (255),
 state VARCHAR (255),
 first_name VARCHAR(255),
