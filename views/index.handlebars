@@ -113,8 +113,21 @@
           <li data-id="{{this.id}}" class="list-group-item">
             <a href="example/{{this.id}}">{{this.text}}</a>
             <p>{{this.description}}</p>
+            <button type="button" id="modalBtn" class="btn btn-primary">
+              View Info
+            </button>
             <button class="btn btn-danger float-right delete">ｘ</button>
           </li>
+
+          <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p>Some text in the Modal..</p>
+            </div>
+
+          </div>
           {{/each}}
         </ul>
 
