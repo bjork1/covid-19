@@ -55,48 +55,23 @@ var refreshExamples = function() {
         .attr({
           class: "list-group-item",
           "data-id": example.id
+         
+
         })
         $li.append($a);
         $li.append($d);
-/*
-        var $d = $("<p>")
-        .text(example.description)
-        .attr("/example/" + example.id);
 
-        var $li = $("<li>")
-        .attr({
-          class: "list-group-item",
-          "data-id": example.id
-        })
-        
-        .append($d);
-
-        */
-       //var $d = $("<p>")
-      // .text(example.text + "</br>")
- 
-       //.text(example.description)
-       //added below
-       //.text(example.description)
-      // .attr(example.id);
-       
-     
-      // $li.append($d);
-
-
-
-        
-
-
-        
-      
-      
-
+        $('.modal-content').append(example.description);
       var $button = $("<button>")
         .addClass("btn btn-danger float-right delete")
         .text("ｘ");
 
+        var $modalBtn = $("<button id='modalBtn'>")
+        .addClass("btn btn-primary")
+        .text("View Info");
+
       $li.append($button);
+      $li.append($modalBtn);
 
       return $li;
     });
@@ -157,3 +132,44 @@ var handleDeleteBtnClick = function() {
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
 $exampleList.on("click", ".delete", handleDeleteBtnClick);
+$("#modalBtn").on("click", handleModal);
+
+function handleModal(){
+
+
+  API.getExamples().then(function(data) {
+    var $examples = data.map(function(example) {
+      
+     $('.modal-content').append('<p>' + example.description + '</p>')
+      
+
+    });
+
+    
+  });
+  // Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("modalBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+}
