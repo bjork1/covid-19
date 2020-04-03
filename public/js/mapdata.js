@@ -63,7 +63,7 @@ simplemaps_statemap_mapdata={
   state_specific: {
     "27001": {
       name: "Aitkin",
-      description: "default",
+      description: "donut frenzy",
       color: "default",
       hover_color: "default",
       url: "default"

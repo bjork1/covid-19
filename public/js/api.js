@@ -21,8 +21,33 @@ req.end(function (covidData) {
 	var covidStats = covidData.body.data.covid19Stats
 
 	var minnStats = covidStats.filter(stat => stat.province === 'Minnesota')
+
+	var hennStats = covidStats.filter(stat => stat.city === 'Hennepin')
+	
+	var hennConfirmed = hennStats[0].confirmed
+	var hennDeaths = hennStats[0].deaths
+	var hennRecovered = hennStats[0].recovered
+
+	console.log(hennConfirmed)
+	var hennDeaths = hennStats.hennDeaths
+	var hennRecovered = hennStats.recovered
+	var displayConfirmed = $("<div></div>").text("Confirmed Cases: " + hennConfirmed)
+    var displayDeaths = $("<div></div>").text("Deaths: " + hennDeaths)
+    var displayRecov = $("<div></div>").text("Recovered: " + hennRecovered)
+
+	displayConfirmed.addClass("cityStats")
+	displayDeaths.addClass("cityStats")
+	displayRecov.addClass("cityStats")
+
+	$("#minneapolisData").append(displayConfirmed)
+	$("#minneapolisData").append(displayDeaths)
+	$("#minneapolisData").append(displayRecov)
+	
+	
+	
 	//module.exports = minnStats
 
+	console.log(hennStats)
 	console.table(minnStats)
 	return minnStats
 	}
