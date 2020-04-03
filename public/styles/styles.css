@@ -1,23 +1,33 @@
 body {
   margin: 0;
   padding: 0;
-  background: greenyellow;
+  background-color: lightseagreen;
 }
 
 .row {
   width: 80vw;
   margin: auto;
-  border-color: aquamarine;
-  background-color: blue;
 }
 .red {
   background-color: red;
 }
+.blue {
+  background-color: blue;
+}
 
+.cases {
+  width: 90%;
+  margin: auto;
+  border-color: aquamarine;
+  background-color: grey;
+}
 .form-group {
   margin: 20px;
 }
 
+input {
+  max-width: 60%;
+}
 textarea {
   max-width: 60%;
 }
@@ -44,17 +54,9 @@ form {
 }
 
 .post {
-  padding: 0;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  border: 0;
-  border-radius: 0;
-  background: transparent;
-  line-height: 1;
-  cursor: auto; }
-  [data-whatinput='mouse'] button {
-    outline: 0; }
+  background-color: orange;
+  font-size: 20px;
+  margin-right: 5%;
 }
 
 .btn-view {
@@ -76,15 +78,6 @@ h1 {
   text-align: center;
 }
 
-h2 {
-  margin-left: 5%;
-  margin-right: 5%;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: orange;
-  font-size: large;
-  text-align: center;
-}
-
 h3 {
   margin-left: 5%;
   margin-right: 5%;
@@ -98,3 +91,4 @@ h3 {
 #modalBtn {
   align: center;
 }
+
