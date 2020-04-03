@@ -106,71 +106,89 @@
       <div class="col-8 offset-2">
         <!-- <h1>{{msg}}</h1> -->
         <h1>Minneapolis, Minnesota</h1>
+
+
+        <div>
+          <!-- api will go here -->
+        </div>
+
+
         <h2>Last updated Date</h2>
-        <h3>Recent Posts</h3>
-        <ul id="example-list" class="list-group">
-          {{#each examples}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
-            <p>{{this.description}}</p>
-            <button type="button" id="modalBtn" class="btn btn-primary">
-              View Info
-            </button>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-          </li>
 
-          <div id="myModal" class="modal">
+        <!-- add grid system below -->
 
-            <!-- Modal content -->
-            <div class="modal-content">
-              <span class="close">&times;</span>
-              <p>Some text in the Modal..</p>
+        <div class="row">
+          <div class="medium-6 columns"></div>
+          <div class="medium-6 columns"></div>
+
+
+          <h3>Recent Posts</h3>
+          <ul id="example-list" class="list-group">
+            {{#each examples}}
+            <li data-id="{{this.id}}" class="list-group-item">
+              <a href="example/{{this.id}}">{{this.text}}</a>
+              <p>{{this.description}}</p>
+              <button type="button" id="modalBtn" class="btn btn-primary">
+                View Info
+              </button>
+              <button class="btn btn-danger float-right delete">ｘ</button>
+            </li>
+
+            <div id="myModal" class="modal">
+
+              <!-- Modal content -->
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>Some text in the Modal..</p>
+              </div>
+
             </div>
+            {{/each}}
+          </ul>
 
-          </div>
-          {{/each}}
-        </ul>
+          <form class="clearfix mb-4" action="POST">
+            <div class="form-group">
+              <label for="example-text">Title of Item</label>
+              <input type="text" id="example-text" class="form-control" aria-describedby="example-text"
+                placeholder="What do you have to give?">
+            </div>
+            <div class="form-group">
+              <label for="example-description">Item Description</label>
+              <textarea class="form-control" id="example-description" aria-describedby="example-description"
+                placeholder="Describe the item in 10 words or less"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="example-name">First Name</label>
+              <textarea class="form-control" id="example-name" aria-describedby="example-name"
+                placeholder="Describe the item in 10 words or less"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="example-city">City</label>
+              <textarea class="form-control" id="example-city" aria-describedby="example-city"
+                placeholder="Describe the item in 10 words or less"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="example-state">State</label>
+              <textarea class="form-control" id="example-state" aria-describedby="example-state"
+                placeholder="Describe the item in 10 words or less"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="example-price">Price</label>
+              <textarea class="form-control" id="example-price" aria-describedby="example-price"
+                placeholder="Describe the item in 10 words or less"></textarea>
+            </div>
+            <button id="submit" class="btn btn-primary float-right">Post!</button>
+          </form>
 
-        <form class="clearfix mb-4" action="POST">
-          <div class="form-group">
-            <label for="example-text">Title of Item</label>
-            <input type="text" id="example-text" class="form-control" aria-describedby="example-text"
-              placeholder="What do you have to give?">
-          </div>
-          <div class="form-group">
-            <label for="example-description">Item Description</label>
-            <textarea class="form-control" id="example-description" aria-describedby="example-description"
-              placeholder="Describe the item in 10 words or less"></textarea>
-          </div>
-          <div class="form-group">
-            <label for="example-name">First Name</label>
-            <textarea class="form-control" id="example-name" aria-describedby="example-name"
-              placeholder="Describe the item in 10 words or less"></textarea>
-          </div>
-          <div class="form-group">
-            <label for="example-city">City</label>
-            <textarea class="form-control" id="example-city" aria-describedby="example-city"
-              placeholder="Describe the item in 10 words or less"></textarea>
-          </div>
-          <div class="form-group">
-            <label for="example-state">State</label>
-            <textarea class="form-control" id="example-state" aria-describedby="example-state"
-              placeholder="Describe the item in 10 words or less"></textarea>
-          </div>
-          <div class="form-group">
-            <label for="example-price">Price</label>
-            <textarea class="form-control" id="example-price" aria-describedby="example-price"
-              placeholder="Describe the item in 10 words or less"></textarea>
-          </div>
-          <button id="submit" class="btn btn-primary float-right">Post!</button>
-        </form>
-
+        </div>
       </div>
     </div>
   </div>
-</div>
 
 
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/index.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="/js/index.js"></script>
+  <script src="/js/api.js"></script>
+  <script src="/js/bundle.js"></script>
+  <script src="/js/app.js"></script>
+  <script src="/js/app.js.map"></script>
