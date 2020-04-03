@@ -1,3 +1,9 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: greenyellow;
+}
+
 .row {
   width: 80vw;
   margin: auto;
@@ -38,13 +44,22 @@ form {
 }
 
 .post {
-  background-color: orange;
-  font-size: 20px;
-  margin-right: 5%;
+  padding: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  line-height: 1;
+  cursor: auto; }
+  [data-whatinput='mouse'] button {
+    outline: 0; }
 }
 
-.btn-view{
-  
+.btn-view {
+  background-color: white;
+  margin-left: 1%;
 }
 
 header {
@@ -52,20 +67,32 @@ header {
 }
 
 h1 {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 2%;
   font-family: Arial, Helvetica, sans-serif;
   background-color: magenta;
   font-size: xx-large;
+  text-align: center;
 }
 
 h2 {
+  margin-left: 5%;
+  margin-right: 5%;
   font-family: Arial, Helvetica, sans-serif;
   background-color: orange;
   font-size: large;
+  text-align: center;
 }
 
 h3 {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 2%;
   font-family: Arial, Helvetica, sans-serif;
   background-color: orange;
+  font-size: large;
+  text-align: center;
 }
 
 #modalBtn {
