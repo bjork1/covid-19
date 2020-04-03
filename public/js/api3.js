@@ -21,7 +21,7 @@ var activeCases = usaStats[0].cases.active
     var hennDeaths = usaStats[0].deaths.total 
     
     var displayActive = $("<div></div>").text("Active Cases: " + activeCases)
-    var displayCrit = $("<div></div>").text("Active Cases: " + criticalCases)
+    var displayCrit = $("<div></div>").text("Critical Cases: " + criticalCases)
     var displayRecov = $("<div></div>").text("Recovered: " + hennRecovered)
     var displayTotal = $("<div></div>").text("Active Cases: " + totalCases)
     var displayDeaths = $("<div></div>").text("Deaths: " + hennDeaths)
