@@ -1,5 +1,7 @@
 # covid-19
 
+Home page: (https://covid19-application.herokuapp.com/)
+
 The world as we know it is changing and daily life is being altered. Ever since February 2020 chaos has erupted because of the Covid-19 Pandemic.
 
 This application will provide the user with real-time data on how the coronavirus is affecting certain locations, and a place to find and post updates on resources in the area. Want to know which stores are open? Do you have extra soup to share with a neighbor in need? Please share this information on the website and post it to the comments.

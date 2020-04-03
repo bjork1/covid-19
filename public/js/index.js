@@ -12,7 +12,7 @@ var $exampleList = $("#example-list");
 
 // The API object contains methods for each kind of request we'll make
 var API = {
-  saveExample: function(example) {
+  saveExample: function (example) {
     return $.ajax({
       headers: {
         "Content-Type": "application/json"
@@ -22,13 +22,13 @@ var API = {
       data: JSON.stringify(example)
     });
   },
-  getExamples: function() {
+  getExamples: function () {
     return $.ajax({
       url: "api/examples",
       type: "GET"
     });
   },
-  deleteExample: function(id) {
+  deleteExample: function (id) {
     return $.ajax({
       url: "api/examples/" + id,
       type: "DELETE"
@@ -37,36 +37,36 @@ var API = {
 };
 
 // refreshExamples gets new examples from the db and repopulates the list
-var refreshExamples = function() {
-  API.getExamples().then(function(data) {
-    var $examples = data.map(function(example) {
-      
+var refreshExamples = function () {
+  API.getExamples().then(function (data) {
+    var $examples = data.map(function (example) {
+
       var $a = $("<a>")
         .text(example.text)
-  
-        
+
+
         //added below
         //.text(example.description)
         .attr("href", "/example/" + example.id);
-        var $d = $("<p>")
+      var $d = $("<p>")
         .text(example.description);
 
       var $li = $("<li>")
         .attr({
           class: "list-group-item",
           "data-id": example.id
-         
+
 
         })
-        $li.append($a);
-        $li.append($d);
+      $li.append($a);
+      $li.append($d);
 
-        $('.modal-content').append(example.description);
+      $('.modal-content').append(example.description);
       var $button = $("<button>")
         .addClass("btn btn-danger float-right delete")
         .text("ｘ");
 
-        var $modalBtn = $("<button id='modalBtn'>")
+      var $modalBtn = $("<button id='modalBtn'>")
         .addClass("btn btn-primary")
         .text("View Info");
 
@@ -83,7 +83,7 @@ var refreshExamples = function() {
 
 // handleFormSubmit is called whenever we submit a new example
 // Save the new example to the db and refresh the list
-var handleFormSubmit = function(event) {
+var handleFormSubmit = function (event) {
   event.preventDefault();
 
   var example = {
@@ -93,38 +93,38 @@ var handleFormSubmit = function(event) {
     city: $exampleCity.val().trim(),
     state: $exampleState.val().trim()
     //price: $examplePrice.val().trim()
-    
+
   };
 
   if (!(example.text && example.description)) {
     alert("You must enter an example text and description!");
     return;
   }
-  
 
-  API.saveExample(example).then(function() {
+
+  API.saveExample(example).then(function () {
     refreshExamples();
   });
 
   $exampleText.val("");
   $exampleDescription.val("");
-  
+
   $exampleName.val("");
   $exampleCity.val("");
   $exampleState.val("");
   $examplePrice.val("");
-  
-  
+
+
 };
 
 // handleDeleteBtnClick is called when an example's delete button is clicked
 // Remove the example from the db and refresh the list
-var handleDeleteBtnClick = function() {
+var handleDeleteBtnClick = function () {
   var idToDelete = $(this)
     .parent()
     .attr("data-id");
 
-  API.deleteExample(idToDelete).then(function() {
+  API.deleteExample(idToDelete).then(function () {
     refreshExamples();
   });
 };
@@ -134,42 +134,42 @@ $submitBtn.on("click", handleFormSubmit);
 $exampleList.on("click", ".delete", handleDeleteBtnClick);
 $("#modalBtn").on("click", handleModal);
 
-function handleModal(){
+function handleModal() {
 
 
-  API.getExamples().then(function(data) {
-    var $examples = data.map(function(example) {
-      
-     $('.modal-content').append('<p>' + example.description + '</p>')
-      
+  API.getExamples().then(function (data) {
+    var $examples = data.map(function (example) {
+
+      $('.modal-content').append('<p>' + example.description + '</p>')
+
 
     });
 
-    
+
   });
   // Get the modal
-var modal = document.getElementById("myModal");
+  var modal = document.getElementById("myModal");
 
-// Get the button that opens the modal
-var btn = document.getElementById("modalBtn");
+  // Get the button that opens the modal
+  var btn = document.getElementById("modalBtn");
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
-}
+  // When the user clicks the button, open the modal 
+  btn.onclick = function () {
+    modal.style.display = "block";
+  }
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function () {
     modal.style.display = "none";
   }
-}
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
 }
