@@ -10,6 +10,7 @@ body {
 }
 .red {
   background-color: red;
+  margin-bottom: 5%;
 }
 .blue {
   background-color: blue;
@@ -81,14 +82,12 @@ h1 {
 h3 {
   margin-left: 5%;
   margin-right: 5%;
-  margin-top: 2%;
+  margin-top: 2px;
   font-family: Arial, Helvetica, sans-serif;
   background-color: orange;
   font-size: large;
   text-align: center;
 }
 
-#modalBtn {
-  align: center;
-}
+
 
