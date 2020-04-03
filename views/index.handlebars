@@ -119,7 +119,7 @@
 
         <div class="row">
           <div class="medium-6 columns"></div>
-          <div class="medium-6 columns"></div>
+          <div class="medium-6 columns red"></div>
 
 
           <h3>Recent Posts</h3>
@@ -128,7 +128,7 @@
             <li data-id="{{this.id}}" class="list-group-item">
               <a href="example/{{this.id}}">{{this.text}}</a>
               <p>{{this.description}}</p>
-              <button type="button" id="modalBtn" class="btn btn-primary">
+              <button type="button" id="modalBtn" class="btn btn-primary btn-view">
                 View Info
               </button>
               <button class="btn btn-danger float-right delete">ｘ</button>
@@ -177,8 +177,9 @@
               <textarea class="form-control" id="example-price" aria-describedby="example-price"
                 placeholder="Describe the item in 10 words or less"></textarea>
             </div>
-            <button id="submit" class="btn btn-primary float-right">Post!</button>
+            <a href="#" role="button" id="submit" class="btn btn-primary float-right post">Post!</a>
           </form>
+
 
         </div>
       </div>

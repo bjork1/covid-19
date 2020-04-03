@@ -1,6 +1,73 @@
 .row {
+  width: 80vw;
+  margin: auto;
   border-color: aquamarine;
   background-color: blue;
-} 
- 
+}
+.red {
+  background-color: red;
+}
 
+.form-group {
+  margin: 20px;
+}
+
+textarea {
+  max-width: 60%;
+}
+
+form {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 5%;
+  border-color: black;
+  background-color: rebeccapurple;
+}
+
+.list-group {
+  background-color: white;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.list-group-item {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 2%;
+  background-color: limegreen;
+}
+
+.post {
+  background-color: orange;
+  font-size: 20px;
+  margin-right: 5%;
+}
+
+.btn-view{
+  
+}
+
+header {
+  text-align: center;
+}
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: magenta;
+  font-size: xx-large;
+}
+
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: orange;
+  font-size: large;
+}
+
+h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: orange;
+}
+
+#modalBtn {
+  align: center;
+}
