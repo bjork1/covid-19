@@ -4,15 +4,12 @@ body {
 
   background: url("https://ak8.picdn.net/shutterstock/videos/13489808/thumb/1.jpg");
 
-
-  font-family: 'Titillium Web', sans-serif;
-
+  font-family: "Titillium Web", sans-serif;
 }
 
 .row {
   width: 80vw;
   margin: auto;
-
 }
 
 .blue {
@@ -25,7 +22,6 @@ body {
   border-color: aquamarine;
   background-color: grey;
 }
-
 
 .form-group {
   margin: 20px;
@@ -46,16 +42,19 @@ form {
 }
 
 .list-group {
-  background-color: white;
+  /* background-color: white; */
   margin-left: 5%;
   margin-right: 5%;
 }
 
 .list-group-item {
-  margin-left: 5%;
-  margin-right: 5%;
+  /* margin-left: 5%;
+  margin-right: 5%; */
+  padding-left: 5%;
+  padding-right: 5%;
   margin-top: 2%;
   background-color: limegreen;
+  height: 125px;
 }
 
 .post {
@@ -92,8 +91,6 @@ h3 {
   font-size: large;
   text-align: center;
 }
-
-
 
 .formLabel {
   color: #1dffe1;
