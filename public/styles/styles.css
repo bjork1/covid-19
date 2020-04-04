@@ -1,8 +1,12 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: lightseagreen;
+
+  background: url("https://ak8.picdn.net/shutterstock/videos/13489808/thumb/1.jpg");
+
+
   font-family: 'Titillium Web', sans-serif;
+
 }
 
 .row {
@@ -10,9 +14,7 @@ body {
   margin: auto;
 
 }
-.red {
-  background-color: red;
-}
+
 .blue {
   background-color: blue;
 }
@@ -23,6 +25,8 @@ body {
   border-color: aquamarine;
   background-color: grey;
 }
+
+
 .form-group {
   margin: 20px;
 }
@@ -36,8 +40,7 @@ textarea {
 
 form {
   width: 90%;
-  margin: auto;
-  margin-bottom: 5%;
+  margin: 5%;
   border-color: black;
   background-color: rebeccapurple;
 }
@@ -83,16 +86,14 @@ h1 {
 h3 {
   margin-left: 5%;
   margin-right: 5%;
-  margin-top: 2%;
+  margin-top: 2px;
   font-family: Arial, Helvetica, sans-serif;
   background-color: orange;
   font-size: large;
   text-align: center;
 }
 
-#modalBtn {
-  align: center;
-}
+
 
 .formLabel {
   color: #1dffe1;
