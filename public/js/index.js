@@ -56,11 +56,11 @@ var refreshExamples = function() {
 
       $(".modal-content").append(example.description);
       var $button = $("<button>")
-        .addClass("btn btn-danger float-right delete")
+        .addClass("button button-danger float-right delete")
         .text("ｘ");
 
       var $modalBtn = $("<button id='modalBtn'>")
-        .addClass("btn btn-primary")
+        .addClass("button button-primary")
         .text("View Info");
 
       $li.append($button);
