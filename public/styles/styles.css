@@ -1,13 +1,18 @@
 body {
   margin: 0;
   padding: 0;
+
   background: url("https://ak8.picdn.net/shutterstock/videos/13489808/thumb/1.jpg");
+
+
+  font-family: 'Titillium Web', sans-serif;
 
 }
 
 .row {
   width: 80vw;
   margin: auto;
+
 }
 
 .blue {
@@ -90,3 +95,7 @@ h3 {
 
 
 
+.formLabel {
+  color: #1dffe1;
+  font-size: 22px;
+}
