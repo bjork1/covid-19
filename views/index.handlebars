@@ -118,7 +118,7 @@
           <div class="cell small-6 red">
             
 
-            <form class="clearfix mb-4" action="POST">
+            <form class="clearfix mb-4 float-center" action="POST">
               <div class="form-group">
                 <label class="formLabel" for="example-text">Title of Item</label>
                 <input type="text" id="example-text" class="form-control" aria-describedby="example-text"
@@ -149,7 +149,7 @@
                 <textarea class="form-control" id="example-price" aria-describedby="example-price"
                   placeholder="Describe the item in 10 words or less"></textarea>
               </div>
-              <button id="submit" class="btn btn-primary float-right">Post!</button>
+              <button id="submit" class="button large float-center">Post</button>
               <!-- post to example.handlebars broke so re-added above code back in 
               <a href="#" role="button" id="submit" class="btn btn-primary float-right post">Post!</a>
               -->
@@ -162,10 +162,10 @@
               <li data-id="{{this.id}}" class="list-group-item">
                 <a href="example/{{this.id}}">{{this.text}}</a>
                 <p>{{this.description}}</p>
-                <button type="button" id="modalBtn" class="btn btn-primary btn-view">
+                <button type="button" id="modalBtn" class="button btn-primary btn-view">
                   View Info
                 </button>
-                <button class="btn btn-danger float-right delete">ｘ</button>
+                <button class="button button-danger float-right delete">ｘ</button>
               </li>
 
               <div id="myModal" class="modal">
