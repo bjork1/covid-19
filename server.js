@@ -8,6 +8,10 @@ var db = require("./models");
 var express = require("express");
 var bodyParser = require("body-parser");
 var exphbs = require("express-handlebars");
+const {
+  allowInsecurePrototypeAccess
+} = require("@handlebars/allow-prototype-access");
+const Handlebars = require("handlebars");
 
 var PORT = process.env.PORT || 3000;
 
@@ -23,7 +27,13 @@ app.use(express.json());
 // Set Handlebars as the view engine
 var exphbs = require("express-handlebars");
 
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.engine(
+  "handlebars",
+  exphbs({
+    defaultLayout: "main",
+    handlebars: allowInsecurePrototypeAccess(Handlebars)
+  })
+);
 app.set("view engine", "handlebars");
 
 require("./routes/apiRoutes.js")(app);

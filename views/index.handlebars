@@ -1,5 +1,4 @@
 <!--
-
 <div class="header">
   <h1>Minneapolis, Minnesota</h1>
   <h2>Last updated Date</h2>
@@ -77,7 +76,6 @@
       </div>
       <button id="submit" class="btn btn-primary float-right">Submit</button>
     </form>
-
     -->
 
 <!-- ajax -->
@@ -86,13 +84,11 @@
       <textarea placeholder="Type here..."></textarea>
       <button id="submit">Post!</button>
     </form>
-
     -->
 
 <!--
 </div>
 </div>
-
 -->
 
 
@@ -101,96 +97,96 @@
 
   <h1>Minnesota COVID Outreach Hub</h1>
   <div class="grid-x">
-    
-         <!-- add grid system below -->
 
-      
-          <div class="cell small-2  blue">
-            <h3>COVID19 Watch Live</h3>
-            <div id='minneapolisData' class="cases"><b>Cases in the United States</b></div>
-            <div id='minneapolisData2' class="cases"><b>Cases in Hennepin County</b></div>
-          </div>
+    <!-- add grid system below -->
 
 
+    <div class="cell small-2  blue">
+      <h3>COVID19 Watch Live</h3>
+      <div id='minneapolisData' class="cases"><b>Cases in the United States</b></div>
+      <div id='minneapolisData2' class="cases"><b>Cases in Hennepin County</b></div>
+    </div>
 
-          <div class="cell small-6 ">
 
-            <form class="clearfix mb-4 float-center" action="POST">
-              <div class="form-group">
-                <label class="formLabel" for="example-text">Title of Item</label>
-                <input type="text" id="example-text" class="form-control" aria-describedby="example-text"
-                  placeholder="What do you have to give?">
-              </div>
-              <div class="form-group">
-                <label class="formLabel" for="example-description">Item Description</label>
-                <textarea class="form-control" id="example-description" aria-describedby="example-description"
-                  placeholder="Describe the item in 10 words or less"></textarea>
-              </div>
-              <div class="form-group">
-                <label class="formLabel" for="example-name">First Name</label>
-                <textarea class="form-control" id="example-name" aria-describedby="example-name"
-                  placeholder="Describe the item in 10 words or less"></textarea>
-              </div>
-              <div class="form-group">
-                <label class="formLabel" for="example-city">City</label>
-                <textarea class="form-control" id="example-city" aria-describedby="example-city"
-                  placeholder="Describe the item in 10 words or less"></textarea>
-              </div>
-              <div class="form-group">
-                <label class="formLabel" for="example-state">State</label>
-                <textarea class="form-control" id="example-state" aria-describedby="example-state"
-                  placeholder="Describe the item in 10 words or less"></textarea>
-              </div>
-              <div class="form-group">
-                <label class="formLabel" for="example-price">Price</label>
-                <textarea class="form-control" id="example-price" aria-describedby="example-price"
-                  placeholder="Describe the item in 10 words or less"></textarea>
-              </div>
-              <button id="submit" class="button large float-center">Post</button>
-              <!-- post to example.handlebars broke so re-added above code back in 
+
+    <div class="cell small-6 ">
+
+      <form class="clearfix mb-4 float-center" action="POST">
+        <div class="form-group">
+          <label class="formLabel" for="example-text">Title of Item</label>
+          <input type="text" id="example-text" class="form-control" aria-describedby="example-text"
+            placeholder="What do you have to give?">
+        </div>
+        <div class="form-group">
+          <label class="formLabel" for="example-description">Item Description</label>
+          <textarea class="form-control" id="example-description" aria-describedby="example-description"
+            placeholder="Describe the item in 10 words or less"></textarea>
+        </div>
+        <div class="form-group">
+          <label class="formLabel" for="example-name">First Name</label>
+          <textarea class="form-control" id="example-name" aria-describedby="example-name"
+            placeholder="Describe the item in 10 words or less"></textarea>
+        </div>
+        <div class="form-group">
+          <label class="formLabel" for="example-city">City</label>
+          <textarea class="form-control" id="example-city" aria-describedby="example-city"
+            placeholder="Describe the item in 10 words or less"></textarea>
+        </div>
+        <div class="form-group">
+          <label class="formLabel" for="example-state">State</label>
+          <textarea class="form-control" id="example-state" aria-describedby="example-state"
+            placeholder="Describe the item in 10 words or less"></textarea>
+        </div>
+        <div class="form-group">
+          <label class="formLabel" for="example-price">Price</label>
+          <textarea class="form-control" id="example-price" aria-describedby="example-price"
+            placeholder="Describe the item in 10 words or less"></textarea>
+        </div>
+        <button id="submit" class="button large float-center">Post</button>
+        <!-- post to example.handlebars broke so re-added above code back in 
               <a href="#" role="button" id="submit" class="btn btn-primary float-right post">Post!</a>
               -->
-            </form>
-          </div>
-          <div class="cell small-4">
-            <h3>Recent Posts</h3>
-            <ul id="example-list" class="list-group">
-              {{#each examples}}
-              <li data-id="{{this.id}}" class="list-group-item">
-                <a href="example/{{this.id}}">{{this.text}}</a>
-                <p>{{this.description}}</p>
-                <button type="button" id="modalBtn" class="button btn-primary btn-view">
-                  View Info
-                </button>
-                <button class="button button-danger float-right delete">ｘ</button>
-              </li>
-
-              <div id="myModal" class="modal">
-
-                <div class="modal-content">
-                  <span class="close">&times;</span>
-                  <p>Some text in the Modal..</p>
-                </div>
-
-
-              </div>
-              {{/each}}
-            </ul>
-          </div>
-        
-    
+      </form>
     </div>
+    <div class="cell small-4">
+      <h3>Recent Posts</h3>
+      <ul id="example-list" class="list-group">
+        {{#each examples}}
+        <li data-id="{{this.id}}" class="list-group-item">
+          <a href="example/{{this.id}}">{{this.text}}</a>
+          <p>{{this.description}}</p>
+          <button type="button" id="modalBtn" class="button btn-primary btn-view">
+            View Info
+          </button>
+          <button class="button button-danger float-right delete">ｘ</button>
+        </li>
+
+        <div id="myModal" class="modal">
+
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Some text in the Modal..</p>
+          </div>
+
+
+        </div>
+        {{/each}}
+      </ul>
+    </div>
+
+
   </div>
+</div>
 
 
 
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="/js/index.js"></script>
-  <script src="/js/bundle.js"></script>
-  <script src="/js/bundle1.js"></script>
-  <script src="/js/app.js"></script>
-  <script src="/js/app.js.map"></script>
-  <script src="/js/api.js"></script>
-  <script src="js/vendor/jquery.js"></script>
-  <script src="js/vendor/what-input.js"></script>
-  <script src="js/vendor/foundation.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script src="/js/bundle.js"></script>
+<script src="/js/bundle1.js"></script>
+<script src="/js/app.js"></script>
+<script src="/js/app.js.map"></script>
+<script src="/js/api.js"></script>
+<script src="js/vendor/jquery.js"></script>
+<script src="js/vendor/what-input.js"></script>
+<script src="js/vendor/foundation.js"></script>
