@@ -1,17 +1,15 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: lightseagreen;
+  background: url("https://ak8.picdn.net/shutterstock/videos/13489808/thumb/1.jpg");
+
 }
 
 .row {
   width: 80vw;
   margin: auto;
 }
-.red {
-  background-color: red;
-  margin-bottom: 5%;
-}
+
 .blue {
   background-color: blue;
 }
@@ -22,6 +20,8 @@ body {
   border-color: aquamarine;
   background-color: grey;
 }
+
+
 .form-group {
   margin: 20px;
 }
@@ -35,8 +35,7 @@ textarea {
 
 form {
   width: 90%;
-  margin: auto;
-  margin-bottom: 5%;
+  margin: 5%;
   border-color: black;
   background-color: rebeccapurple;
 }
