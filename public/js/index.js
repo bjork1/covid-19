@@ -59,12 +59,12 @@ var refreshExamples = function() {
         .addClass("button button-danger float-right delete")
         .text("ｘ");
 
-      var $modalBtn = $("<button id='modalBtn'>")
-        .addClass("button button-primary")
-        .text("View Info");
+      // var $modalBtn = $("<button id='modalBtn'>")
+      //   .addClass("button button-primary")
+      //   .text("View Info");
 
       $li.append($button);
-      $li.append($modalBtn);
+      // $li.append($modalBtn);
 
       return $li;
     });
