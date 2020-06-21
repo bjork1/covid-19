@@ -95,34 +95,122 @@
 
 <div id="home">
 
-  <h1>Minnesota COVID Outreach Hub</h1>
+  <div class="top-bar">
+  <div class="top-bar-left">
+    <ul class="dropdown menu" data-dropdown-menu>
+      <li class="menu-text">Covid-19 Outreach Hub</li>
+      {{!-- <li>
+        <a href="#">One</a>
+        <ul class="menu vertical">
+          <li><a href="#">One</a></li>
+          <li><a href="#">Two</a></li>
+          <li><a href="#">Three</a></li>
+        </ul>
+      </li> --}}
+      {{!-- <li><a href="#">Two</a></li>
+      <li><a href="#">Three</a></li> --}}
+    </ul>
+  </div>
+  <div class="top-bar-right">
+    <ul class="menu">
+      <li><input type="search" placeholder="Search"></li>
+      <li><button type="button" class="button">Search</button></li>
+    </ul>
+  </div>
+</div>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+
   <div class="grid-x">
 
     <!-- add grid system below -->
 
 
-    <div class="cell small-2  blue">
-      <h3>COVID19 Watch Live</h3>
+    <div class="cell small-3  blue">
+      <h3>LIVE Watch</h3>
       <div id='minneapolisData' class="cases"><b>Cases in the United States</b></div>
-      <div id='minneapolisData2' class="cases"><b>Cases in Hennepin County</b></div>
+      {{!-- <div id='minneapolisData2' class="cases"><b>Cases in Hennepin County</b></div> --}}
     </div>
 
 
 
-    <div class="cell small-6 ">
+    <div class="cell small-5 ">
+      <p class="h1">Hennepin County</p>
 
+
+
+<div class = "grid-x">
+
+  <div class = "cell small-6">
+<div class="card">
+  <div class="card-divider">
+    Confirmed Cases
+  </div>
+  {{!-- <img src="assets/img/generic/rectangle-1.jpg"> --}}
+  <div class="card-section">
+    <h4 id='minneapolisData2'></h4>
+    
+  </div>
+</div>
+
+</div>
+<div class = "cell small-6">
+<div class="card">
+  <div class="card-divider">
+    Death Count
+  </div>
+  {{!-- <img src="assets/img/generic/rectangle-1.jpg"> --}}
+  <div class="card-section">
+    <h4 id='minneapolisData3'></h4>
+    
+  </div>
+</div>
+
+</div>
+</div>
+      
+
+
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+  
       <form class="clearfix mb-4 float-center" action="POST">
+        <h4>How can you help the community?</h4>
         <div class="form-group">
-          <label class="formLabel" for="example-text">Title of Item</label>
+          <label class="formLabel" for="example-text">Title</label>
           <input type="text" id="example-text" class="form-control" aria-describedby="example-text"
-            placeholder="What do you have to give?">
+            placeholder="Enter title of your post here.">
         </div>
         <div class="form-group">
-          <label class="formLabel" for="example-description">Item Description</label>
+          <label class="formLabel" for="example-description">Description</label>
           <textarea class="form-control" id="example-description" aria-describedby="example-description"
-            placeholder="Describe the item in 10 words or less"></textarea>
+            placeholder="Enter the description of your post here."></textarea>
         </div>
-        <div class="form-group">
+        {{!-- <div class="form-group">
           <label class="formLabel" for="example-name">First Name</label>
           <textarea class="form-control" id="example-name" aria-describedby="example-name"
             placeholder="Describe the item in 10 words or less"></textarea>
@@ -141,7 +229,7 @@
           <label class="formLabel" for="example-price">Price</label>
           <textarea class="form-control" id="example-price" aria-describedby="example-price"
             placeholder="Describe the item in 10 words or less"></textarea>
-        </div>
+        </div> --}}
         <button id="submit" class="button large float-center">Post</button>
         <!-- post to example.handlebars broke so re-added above code back in 
               <a href="#" role="button" id="submit" class="btn btn-primary float-right post">Post!</a>
@@ -155,13 +243,33 @@
         <li data-id="{{this.id}}" class="list-group-item">
           <a href="example/{{this.id}}">{{this.text}}</a>
           <p>{{this.description}}</p>
-          {{!-- <button type="button" id="modalBtn" class="button btn-primary btn-view">
+          {{!-- <button type="button" id="modalBtn" class="button button-primary button-view">
             View Info
           </button> --}}
+
+
+          {{!-- <p><button class="button" data-open="exampleModal1">Click me for a modal</button></p> --}}
+
+
+
+
           <button class="button button-danger float-right delete">ｘ</button>
         </li>
 
-        {{!-- <div id="myModal" class="modal">
+
+
+        {{!-- <div class="reveal" id="exampleModal1" data-reveal>
+          <h1>
+            {{this.name}}
+          </h1>
+          <p class="lead">{{this.city}}, {{this.state}}</p>
+          <p>{{this.price}}</p>
+          <button class="close-button" data-close aria-label="Close modal" type="button">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <div id="myModal" class="modal">
 
           <div class="modal-content">
             <span class="close">&times;</span>
@@ -175,8 +283,12 @@
     </div>
 
 
-  </div>
+
+
 </div>
+
+
+  
 
 
 
