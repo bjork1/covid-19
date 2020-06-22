@@ -1,10 +1,7 @@
 // Get references to page elements
 var $exampleText = $("#example-text");
 var $exampleDescription = $("#example-description");
-var $exampleName = $("#example-name");
-var $exampleCity = $("#example-city");
-var $exampleState = $("#example-state");
-var $examplePrice = $("#example-price");
+
 
 var $submitBtn = $("#submit");
 var $exampleList = $("#example-list");
@@ -47,26 +44,29 @@ var refreshExamples = function() {
         .attr("href", "/example/" + example.id);
       var $d = $("<p>").text(example.description);
 
-      var $li = $("<li>").attr({
+      var $li = $("<td>").attr({
         class: "list-group-item",
         "data-id": example.id,
       });
       $li.append($a);
       $li.append($d);
 
-      $(".modal-content").append(example.description);
+      //$(".modal-content").append(example.description);
       var $button = $("<button>")
         .addClass("button button-danger float-right delete")
         .text("ｘ");
 
-      var $modalBtn = $("<button id='exampleModal1'>")
-        .addClass("button button-primary")
-        .text("View Info");
+      // var $modalBtn = $("<button id='exampleModal1'>")
+      //   .addClass("button button-primary")
+      //   .text("View Info");
 
       $li.append($button);
-      $li.append($modalBtn);
+     // $li.append($modalBtn);
 
-      return $li;
+
+     var $tr = $("<tr>");
+     $tr.append($li);
+      return $tr;
     });
 
     $exampleList.empty();
@@ -113,6 +113,15 @@ var handleDeleteBtnClick = function() {
 $submitBtn.on("click", handleFormSubmit);
 $exampleList.on("click", ".delete", handleDeleteBtnClick);
 $("#exampleModal1").on("click", handleModal);
+
+
+
+
+
+
+
+//STOP
+//Nothing below is NEEDED
 
 function handleModal() {
   API.getExamples().then(function(data) {
