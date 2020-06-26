@@ -1,8 +1,18 @@
+#blueBG {
+  background-color: #D7ECFA;
+}
+
+#blueText {
+  background-color: #D7ECFA;
+}
+
+#blueMiddle {
+  background-color: #D7ECFA;
+}
 body {
   margin: 0;
   padding: 0;
 
-  background: url("https://ak8.picdn.net/shutterstock/videos/13489808/thumb/1.jpg");
 
   font-family: "Titillium Web", sans-serif;
 }
@@ -12,15 +22,11 @@ body {
   margin: auto;
 }
 
-.blue {
-  background-color: blue;
-}
+
 
 .cases {
   width: 90%;
   margin: auto;
-  border-color: aquamarine;
-  background-color: grey;
 }
 
 .form-group {
@@ -38,7 +44,6 @@ form {
   width: 90%;
   margin: 5%;
   border-color: black;
-  background-color: rebeccapurple;
 }
 
 .list-group {
@@ -53,12 +58,10 @@ form {
   padding-left: 5%;
   padding-right: 5%;
   margin-top: 2%;
-  background-color: limegreen;
   height: 125px;
 }
 
 .post {
-  background-color: orange;
   font-size: 20px;
   margin-right: 5%;
 }
@@ -87,12 +90,10 @@ h3 {
   margin-right: 5%;
   margin-top: 2px;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: orange;
   font-size: large;
   text-align: center;
 }
 
 .formLabel {
-  color: #1dffe1;
   font-size: 22px;
 }

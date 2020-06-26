@@ -1,10 +1,7 @@
 // Get references to page elements
 var $exampleText = $("#example-text");
 var $exampleDescription = $("#example-description");
-var $exampleName = $("#example-name");
-var $exampleCity = $("#example-city");
-var $exampleState = $("#example-state");
-var $examplePrice = $("#example-price");
+
 
 var $submitBtn = $("#submit");
 var $exampleList = $("#example-list");
@@ -14,25 +11,25 @@ var API = {
   saveExample: function(example) {
     return $.ajax({
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
       },
       type: "POST",
       url: "api/examples",
-      data: JSON.stringify(example)
+      data: JSON.stringify(example),
     });
   },
   getExamples: function() {
     return $.ajax({
       url: "api/examples",
-      type: "GET"
+      type: "GET",
     });
   },
   deleteExample: function(id) {
     return $.ajax({
       url: "api/examples/" + id,
-      type: "DELETE"
+      type: "DELETE",
     });
-  }
+  },
 };
 
 // refreshExamples gets new examples from the db and repopulates the list
@@ -47,26 +44,29 @@ var refreshExamples = function() {
         .attr("href", "/example/" + example.id);
       var $d = $("<p>").text(example.description);
 
-      var $li = $("<li>").attr({
+      var $li = $("<td>").attr({
         class: "list-group-item",
-        "data-id": example.id
+        "data-id": example.id,
       });
       $li.append($a);
       $li.append($d);
 
-      $(".modal-content").append(example.description);
+      //$(".modal-content").append(example.description);
       var $button = $("<button>")
         .addClass("button button-danger float-right delete")
         .text("ｘ");
 
-      // var $modalBtn = $("<button id='modalBtn'>")
+      // var $modalBtn = $("<button id='exampleModal1'>")
       //   .addClass("button button-primary")
       //   .text("View Info");
 
       $li.append($button);
-      // $li.append($modalBtn);
+     // $li.append($modalBtn);
 
-      return $li;
+
+     var $tr = $("<tr>");
+     $tr.append($li);
+      return $tr;
     });
 
     $exampleList.empty();
@@ -81,11 +81,7 @@ var handleFormSubmit = function(event) {
 
   var example = {
     text: $exampleText.val().trim(),
-    description: $exampleDescription.val().trim(),
-    name: $exampleName.val().trim(),
-    city: $exampleCity.val().trim(),
-    state: $exampleState.val().trim(),
-    price: $examplePrice.val().trim()
+    description: $exampleDescription.val().trim()
   };
 
   if (!(example.text && example.description)) {
@@ -99,11 +95,6 @@ var handleFormSubmit = function(event) {
 
   $exampleText.val("");
   $exampleDescription.val("");
-
-  $exampleName.val("");
-  $exampleCity.val("");
-  $exampleState.val("");
-  $examplePrice.val("");
 };
 
 // handleDeleteBtnClick is called when an example's delete button is clicked
@@ -121,7 +112,16 @@ var handleDeleteBtnClick = function() {
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
 $exampleList.on("click", ".delete", handleDeleteBtnClick);
-$("#modalBtn").on("click", handleModal);
+$("#exampleModal1").on("click", handleModal);
+
+
+
+
+
+
+
+//STOP
+//Nothing below is NEEDED
 
 function handleModal() {
   API.getExamples().then(function(data) {
@@ -133,7 +133,7 @@ function handleModal() {
   var modal = document.getElementById("myModal");
 
   // Get the button that opens the modal
-  var btn = document.getElementById("modalBtn");
+  var btn = document.getElementById("exampleModal1");
 
   // Get the <span> element that closes the modal
   var span = document.getElementsByClassName("close")[0];

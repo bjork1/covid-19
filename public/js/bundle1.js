@@ -23,8 +23,8 @@ $.ajax(settings).done(function (covidData) {
 	var hennDeaths = hennStats[0].deaths
 	var hennRecovered = hennStats[0].recovered
 
-	var displayConfirmed = $("<div></div>").text("Confirmed Cases: " + hennConfirmed)
-    var displayDeaths = $("<div></div>").text("Deaths: " + hennDeaths)
+	var displayConfirmed = $("<div></div>").text(hennConfirmed + " cases")
+    var displayDeaths = $("<div></div>").text(hennDeaths + " deaths")
     var displayRecov = $("<div></div>").text("Recovered: " + hennRecovered)
 
 	displayConfirmed.addClass("cityStats")
@@ -32,8 +32,8 @@ $.ajax(settings).done(function (covidData) {
 	displayRecov.addClass("cityStats")
 
 	$("#minneapolisData2").append(displayConfirmed)
-	$("#minneapolisData2").append(displayDeaths)
-	$("#minneapolisData2").append(displayRecov)
+	$("#minneapolisData3").append(displayDeaths)
+	//$("#minneapolisData2").append(displayRecov)
 // var unirest = require("unirest");
 
 // var req = unirest("GET", "https://covid-193.p.rapidapi.com/statistics");
