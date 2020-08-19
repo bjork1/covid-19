@@ -1,21 +1,19 @@
 # covid-19
 
-Home page: (https://covid19-application.herokuapp.com/)
+Home page: https://covid19-application.herokuapp.com/
 
 The world as we know it is changing and daily life is being altered. Ever since February 2020 chaos has erupted because of the Covid-19 Pandemic.
 
-This application will provide the user with real-time data on how the coronavirus is affecting certain locations, and a place to find and post updates on resources in the area. Want to know which stores are open? Do you have extra soup to share with a neighbor in need? Please share this information on the website and post it to the comments.
+This application provides the user with real-time data on Coronavirus statistics for Minneapolis, Minnesota. Future iterations wil include data for nataional and international statistics. 
 
-This project uses handlebars, ORM structure with routes using get and post, a MySQL database, Travis CI for testing and improvements, a coronavirus API, and a server using node and express.
+The application also provides users with an opportunity to help others or seek help via posting: Want to know which stores are open? Do you have an item to lend to a neighbor in need? Posts can help the users find the information they need specific to their area, provided by reliable users in the post section.
 
-The project is created in three iterations, with the following iterations including the following information:
+![](./CovidPic.PNG)
 
-![](./views/img/Homepage.png)
+This project uses handlebars, ORM structure with routes using get and post, a MySQL database, Travis CI for testing and improvements, a John Hopkins University API for Covid-19 statistics, and a server using node and Express. The front-end uses Materialize for styling. The application is deployed to Heroku, using JawsDB for data storage: https://covid19-application.herokuapp.com/
 
-Here are the three iterations:
 
-1.  A functioning server with structure and posting basic comments to the browser through a single forum.
 
-2.  API data included into the browser for recent coronavirus statistics based off of the location and the date. Location is "Minneapolis" by default for this project, and current date is displayed to the page.
 
-3.  Two sections of posting comments (right and lefthand sides) with two choices to select from. Most recent comments are shown and can be clicked on. All comments are organized by location.
+
+
