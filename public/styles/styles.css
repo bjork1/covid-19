@@ -1,5 +1,9 @@
+.top {
+  margin-top: 10%;
+}
 #blueBG {
   background-color: #D7ECFA;
+  border-bottom: 2px solid #1779ba;
 }
 
 #blueText {
@@ -37,7 +41,8 @@ input {
   max-width: 60%;
 }
 textarea {
-  max-width: 60%;
+  max-width: 100%;
+
 }
 
 form {

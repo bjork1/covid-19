@@ -1,118 +1,14 @@
-<!--
-<div class="header">
-  <h1>Minneapolis, Minnesota</h1>
-  <h2>Last updated Date</h2>
-</div>
-<div class="main-body">
-  <div class="supply-menu">
-    <h3>Get supplies now</h3>
-    <div class="recent-post">
-      <p>Recent Posts</p>
-      <h3>Examples:</h3>
-      <ul id="example-list" class="list-group">
-        {{#each examples}}
-        <li data-id="{{this.id}}" class="list-group-item">
-          <a href="example/{{this.id}}">{{this.text}}</a>
-          <button class="btn btn-danger float-right delete">ｘ</button>
-        </li>
-        {{/each}}
-      </ul>
-      <div class="post-card">
-        <div class="right">
-          <h5>Title</h5>
-          <p>distance away</p>
-        </div>
-        <div class="left">
-          <img class="post icon">
-          <button>Get</button>
-        </div>
-      </div>
-      <div class="post-card">
-        <div class="right">
-          <h5>Title</h5>
-          <p>distance away</p>
-        </div>
-        <div class="left">
-          <img class="post icon">
-          <button>Get</button>
-        </div>
-      </div>
-      <div class="post-card">
-        <div class="right">
-          <h5>Title</h5>
-          <p>distance away</p>
-        </div>
-        <div class="left">
-          <img class="post icon">
-          <button>Get</button>
-        </div>
-      </div>
-      <p><a href=*>View More</a></p>
-    </div>
-  </div>
-  <div class="center-page">
-    <div class="bubble">
-      <h6 class="number of cases">287</h6>
-      <p>cases</p>
-    </div>
-    <div class="case-info">
-      <h3>1 death</h3>
-      <h3>26 critical</h3>
-    </div>
-    <div class="share buttons">
-      <radio class="supplies">Share Supplies</radio>
-      <radio class="stories">Share Stories</radio>
-    </div>
-    <form class="clearfix mb-4" action="POST">
-      <div class="form-group">
-        <label for="example-text">Example Text</label>
-        <input type="text" id="example-text" class="form-control" aria-describedby="example-text"
-          placeholder="Enter Example Text">
-      </div>
-      <div class="form-group">
-        <label for="example-description">Example Description</label>
-        <textarea class="form-control" id="example-description" aria-describedby="example-description"
-          placeholder="Enter Example Description"></textarea>
-      </div>
-      <button id="submit" class="btn btn-primary float-right">Submit</button>
-    </form>
-    -->
-
-<!-- ajax -->
-<!--
-    <form class="info post">
-      <textarea placeholder="Type here..."></textarea>
-      <button id="submit">Post!</button>
-    </form>
-    -->
-
-<!--
-</div>
-</div>
--->
-
-
-
 <div id="home">
 
-  <div class="top-bar" id = "blueBG">
+  <div class="top-bar" id="blueBG">
     <div class="top-bar-left">
-      <ul class="dropdown menu" id = "blueText">
-        <li class="menu-text" >Covid-19 Outreach Hub</li>
-        {{!-- <li>
-        <a href="#">One</a>
-        <ul class="menu vertical">
-          <li><a href="#">One</a></li>
-          <li><a href="#">Two</a></li>
-          <li><a href="#">Three</a></li>
-        </ul>
-      </li> --}}
-        {{!-- <li><a href="#">Two</a></li>
-      <li><a href="#">Three</a></li> --}}
+      <ul class="dropdown menu" id="blueText">
+        <li class="menu-text">Covid-19 Outreach Hub</li>
+
       </ul>
     </div>
-    <div class="top-bar-right" >
-      <ul class="menu" >
+    <div class="top-bar-right">
+      <ul class="menu">
         <li><input type="search" placeholder="Search"></li>
         <li><button type="button" class="button">Search</button></li>
       </ul>
@@ -130,18 +26,15 @@
 
 <div class="grid-x">
 
-  <!-- add grid system below -->
 
 
-  <div class="cell small-3">
-    <h3>LIVE Watch</h3>
-    <div id='minneapolisData' class="cases"><b>Cases in the United States</b></div>
-    {{!-- <div id='minneapolisData2' class="cases"><b>Cases in Hennepin County</b></div> --}}
+  <div class="cell small-1">
+
   </div>
 
 
 
-  <div class="cell small-4 ">
+  <div class="cell small-5 ">
     <p class="h1">Hennepin County</p>
 
 
@@ -153,7 +46,6 @@
           <div class="card-divider">
             Confirmed Cases
           </div>
-          {{!-- <img src="assets/img/generic/rectangle-1.jpg"> --}}
           <div class="card-section">
             <h4 id='minneapolisData2'></h4>
 
@@ -166,7 +58,6 @@
           <div class="card-divider">
             Death Count
           </div>
-          {{!-- <img src="assets/img/generic/rectangle-1.jpg"> --}}
           <div class="card-section">
             <h4 id='minneapolisData3'></h4>
 
@@ -177,92 +68,51 @@
     </div>
 
 
+    <div class="callout primary">
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="callout primary">
-  
-
-
-
-    <form class="clearfix mb-4 float-center" action="POST">
-      <h4>How can you help the community?</h4>
-      <div class="form-group">
-        <label class="formLabel" for="example-text">Title</label>
-        <input type="text" id="example-text" class="form-control" aria-describedby="example-text"
-          placeholder="Enter title of your post here.">
-      </div>
-      <div class="form-group">
-        <label class="formLabel" for="example-description">Description</label>
-        <textarea class="form-control" id="example-description" aria-describedby="example-description"
-          placeholder="Enter the description of your post here."></textarea>
-      </div>
-      {{!-- <div class="form-group">
-          <label class="formLabel" for="example-name">First Name</label>
-          <textarea class="form-control" id="example-name" aria-describedby="example-name"
-            placeholder="Describe the item in 10 words or less"></textarea>
+      <form class="clearfix mb-4 float-center" action="POST">
+        <h4>How can you help the community?</h4>
+        <div class="form-group">
+          <label class="formLabel" for="example-text">Title</label>
+          <input type="text" id="example-text" class="form-control" aria-describedby="example-text"
+            placeholder="Enter title">
         </div>
         <div class="form-group">
-          <label class="formLabel" for="example-city">City</label>
-          <textarea class="form-control" id="example-city" aria-describedby="example-city"
-            placeholder="Describe the item in 10 words or less"></textarea>
+          <label class="formLabel" for="example-description">Description</label>
+          <textarea class="form-control" id="example-description" aria-describedby="example-description"
+            placeholder="Enter the description"></textarea>
         </div>
-        <div class="form-group">
-          <label class="formLabel" for="example-state">State</label>
-          <textarea class="form-control" id="example-state" aria-describedby="example-state"
-            placeholder="Describe the item in 10 words or less"></textarea>
-        </div>
-        <div class="form-group">
-          <label class="formLabel" for="example-price">Price</label>
-          <textarea class="form-control" id="example-price" aria-describedby="example-price"
-            placeholder="Describe the item in 10 words or less"></textarea>
-        </div> --}}
-      <button id="submit" class="button primary float-center">Post</button>
-      <!-- post to example.handlebars broke so re-added above code back in 
-              <a href="#" role="button" id="submit" class="btn btn-primary float-right post">Post!</a>
-              -->
-    </form>
+
+        <button id="submit" class="button primary float-center">Post</button>
+
+      </form>
 
 
     </div>
   </div>
 
+  <div class="cell small-1"></div>
 
- <div class="cell small-1">
-
- </div>
 
 
   <div class="cell small-4">
-   
 
 
-    <table>
+
+    <table class="top">
       <thead>
         <tr>
-          <th width="200">Recent Posts</th>
+          <th>Recent Posts</th>
 
 
         </tr>
       </thead>
       <tbody id="example-list">
         {{#each examples}}
-        <tr >
+        <tr>
           <td data-id="{{this.id}}"><a href="example/{{this.id}}">{{this.text}}</a>
             <p>{{this.description}}</p>
 
@@ -280,25 +130,12 @@
     </table>
 
 
-    {{!-- <ul id="example-list" class="list-group">
-      {{#each examples}}
-      <li data-id="{{this.id}}" class="list-group-item">
-        <a href="example/{{this.id}}">{{this.text}}</a>
-        <p>{{this.description}}</p>
 
-
-
-
-
-        <button class="button button-danger float-right delete">ｘ</button>
-      </li>
-
-
-      {{/each}}
-    </ul> --}}
   </div>
 
+  <div class="cell small-1">
 
+  </div>
 
 
 </div>
